@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApisService } from 'src/app/services/apis.service';
+import { GuardarFirestoreService } from 'src/app/services/guardar-firestore.service';
 
 @Component({
   selector: 'app-data-list',
@@ -11,7 +12,7 @@ export class DataListPage implements OnInit {
   public libros: any = {};
   public loading = false;
 
-  constructor(private dataService: ApisService) {}
+  constructor(private dataService: ApisService, private firestore: GuardarFirestoreService) {}
 
   ngOnInit() {
     this.loadPerros(10);
@@ -53,4 +54,9 @@ export class DataListPage implements OnInit {
       },
     });
   }
+
+  guardarLibro(libro: any){
+    this.firestore.guardarLibroFireStore({titulo: libro.title})
+  }
+
 }
