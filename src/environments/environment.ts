@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  APIDOGS: 'https://dog.ceo/api/breed/affenpinscher/images/random',
+  APIBOOKS: 'https://gutendex.com/books/',
+  APIURL3: 'https://robohash.org/xd',
 };
 
 /*
