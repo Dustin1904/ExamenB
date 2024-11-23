@@ -55,8 +55,8 @@ export class DataListPage implements OnInit {
     });
   }
 
-  guardarLibro(libro: any){
-    this.firestore.guardarLibroFireStore({titulo: libro.title})
+  guardarLibro(libro: any, perros: any){
+    this.firestore.guardarLibroFireStore({titulo: libro , imagen: perros})
   }
 
 }

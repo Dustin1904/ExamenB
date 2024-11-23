@@ -8,8 +8,7 @@ export class GuardarFirestoreService {
 
   constructor( private firestore: AngularFirestore) { }
 
-  guardarLibroFireStore(libro: any) {
-    this.firestore.collection('libros').add(libro)
+  async guardarLibroFireStore(libro: any) {
+    await this.firestore.collection('libros').add(libro)
   }
-
 }

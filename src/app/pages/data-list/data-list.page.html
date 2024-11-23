@@ -16,7 +16,7 @@
       <img [src]="perro" />
       <div *ngIf="libros?.results?.[i]">
         <label>{{ libros.results[i].title }}</label>
-        <ion-button (click)="guardarLibro(libros)">Guardar este libro</ion-button>
+        <ion-button (click)="guardarLibro(libros.results[i].title , perro)">Guardar este libro</ion-button>
       </div>
     </ion-card>
   </ion-list>
